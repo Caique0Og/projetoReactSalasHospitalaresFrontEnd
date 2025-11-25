@@ -1,0 +1,405 @@
+/* CSS para a página Sobre - adicione ao seu arquivo existente */
+
+.sobre-container {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.sobre-hero {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+  border-bottom: 1px solid rgba(71, 85, 105, 0.2);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.sobre-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #ffffff, #06b6d4, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+}
+
+.sobre-subtitle {
+  font-size: 1.3rem;
+  color: #ffffff;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Timeline */
+.timeline-section {
+  padding: 4rem 2rem;
+  position: relative;
+  animation: fadeInUp 0.8s 0.2s ease forwards;
+  animation-fill-mode: both;
+}
+
+.timeline-section::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #292d22, #444b39);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  text-align: right;
+}
+
+.timeline-marker {
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #66CDAA, #336d5a);
+  border-radius: 50%;
+  border: 4px solid #0f172a;
+  z-index: 2;
+  flex-shrink: 0;
+  margin: 0 2rem;
+  box-shadow: 0 0 20px rgba(0,128,128, 0.5);
+  animation: pulse 2s infinite;
+}
+
+.timeline-content {
+  flex: 1;
+  max-width: 400px;
+  background: rgba(32,178,170, 0.85);   /*card*/
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 63, 60, 0.85);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  transform: translateY(-50%);
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+  right: -20px;
+  border-left-color: rgba(0, 71, 71, 0.6);
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+  left: -20px;
+  border-right-color: rgba(0, 76, 76, 0.6);
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  background: rgba(13, 75, 72, 0.85);     /*ao passar o mouse*/
+  box-shadow: 0 15px 30px rgba(39, 44, 31, 0.85);
+}
+
+.timeline-content h3 {
+  color: #e10000;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #006161, #003939);   /*2020-fundação...*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.timeline-content p {
+  color: #ffffff;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Valores */
+.valores-section {
+  padding: 4rem 2rem;
+  animation: fadeInUp 0.8s 0.4s ease forwards;
+  animation-fill-mode: both;
+}
+
+.section-title {
+  text-align: center;
+  color: #e70b0b;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #fb0000, #b71515);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.valor-card {
+  background: rgba(32,178,170, 0.85);  /*carde nossos valores*/
+  backdrop-filter: blur(10px);
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 60, 57, 0.85);
+  text-align: center;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.valor-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ffffff, transparent);   /*efeito*/
+  transition: left 0.8s ease;
+}
+
+.valor-card:hover::before {
+  left: 100%;
+}
+
+.valor-card:hover {
+  transform: translateY(-8px);
+  background: rgba(13, 75, 72, 0.85);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(29, 34, 27, 0.612);
+}
+
+.valor-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.valor-card h4 {
+  color: #f30c0c;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #006161, #003939);   /*inovação letra*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.valor-card p {
+  color: #ffffff;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Missão, Visão, Compromisso */
+.missao-section {
+  background: rgba(0,128,128, 0.85);  /*carde nossos valores*/
+  backdrop-filter: blur(10px);
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  border: 1px solid rgb(0, 60, 57);
+  text-align: center;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.missao-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.missao-item {
+  text-align: center;
+  padding: 2rem;
+}
+
+.missao-item h4 {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #006161, #003939);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.missao-item p {
+  color: #ffffff;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Equipe */
+.team-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  animation: fadeInUp 0.8s 0.8s ease forwards;
+  animation-fill-mode: both;
+}
+
+.team-stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(32,178,170, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 31, 29, 0.2);
+}
+
+.team-stat {
+  text-align: center;
+}
+
+.team-stat .stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #006161, #003939);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.team-stat .stat-label {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* CTA */
+.cta-sobre {
+  text-align: center;
+  padding: 4rem 2rem;
+  animation: fadeInUp 0.8s 1s ease forwards;
+  animation-fill-mode: both;
+}
+
+.cta-sobre h3 {
+  color: #60a5fa;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #003434 0%, #008080 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cta-sobre p {
+  color: #008080;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-contato {
+  padding: 1rem 2.5rem;
+  background: linear-gradient(358deg, #b6fffb 0%, #024343 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-contato:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #0891b2 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .sobre-title {
+    font-size: 2.2rem;
+  }
+  
+  .timeline-section::before {
+    left: 30px;
+  }
+  
+  .timeline-item {
+    flex-direction: row !important;
+    margin-left: 60px;
+  }
+  
+  .timeline-item .timeline-content {
+    text-align: left !important;
+  }
+  
+  .timeline-marker {
+    margin: 0 2rem 0 0;
+    position: absolute;
+    left: -60px;
+  }
+  
+  .timeline-content::before {
+    left: -20px !important;
+    border-right-color: rgba(30, 41, 59, 0.6) !important;
+    border-left-color: transparent !important;
+  }
+  
+  .valores-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .missao-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .team-stats {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .missao-section {
+    margin: 1rem;
+    padding: 2rem 1rem;
+  }
+}

@@ -1,0 +1,413 @@
+/* CSS para a página Trabalhe Conosco - substitua o arquivo Trabalhe.css existente */
+
+.trabalhe-container {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* Hero Section */
+.trabalhe-hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+  border-bottom: 1px solid rgba(71, 85, 105, 0.2);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.trabalhe-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #003434 0%, #008080 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+}
+
+.trabalhe-subtitle {
+  font-size: 1.4rem;
+  color: #94a3b8;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #006161, #003939);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: #3e3e3e;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  color: #60a5fa;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #003434 0%, #008080 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Cultura Section */
+.cultura-section {
+  padding: 4rem 2rem;
+  animation: fadeInUp 0.8s 0.2s ease forwards;
+  animation-fill-mode: both;
+}
+
+.cultura-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cultura-card {
+  background: rgba(32,178,170, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(1, 46, 44, 0.85);
+  text-align: center;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cultura-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ffffff, transparent);
+  transition: left 0.8s ease;
+}
+
+.cultura-card:hover::before {
+  left: 100%;
+}
+
+.cultura-card:hover {
+  transform: translateY(-8px);
+  background: rgba(2, 88, 84, 0.85);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(96, 165, 250, 0.5);
+}
+
+.cultura-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.cultura-card h3 {
+  color: #60a5fa;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #006161, #003939);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cultura-card p {
+  color: #ffffff;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Vagas Section */
+.vagas-section {
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.3);
+  animation: fadeInUp 0.8s 0.4s ease forwards;
+  animation-fill-mode: both;
+}
+
+.vagas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vaga-card {
+  background: rgba(0, 40, 40, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 12, 12, 0.8);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.vaga-card:hover {
+  transform: translateY(-5px);
+  background: rgba(0, 18, 18, 0.8);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(96, 165, 250, 0.5);
+}
+
+.vaga-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.vaga-icon {
+  font-size: 2.5rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.vaga-badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.badge-nivel, .badge-modalidade, .badge-salario {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.badge-nivel {
+  background: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.badge-modalidade {
+  background: rgba(6, 182, 212, 0.2);
+  color: #06b6d4;
+  border: 1px solid rgba(6, 182, 212, 0.3);
+}
+
+.badge-salario {
+  background: rgba(139, 92, 246, 0.2);
+  color: #8b5cf6;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.vaga-card h3 {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #ffffff, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.vaga-salario {
+  color: #8b5cf6;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.vaga-preview {
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.vaga-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+  background: rgba(71, 85, 105, 0.5);
+  color: #cbd5e1;
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(71, 85, 105, 0.3);
+}
+
+.tech-more {
+  background: rgba(96, 165, 250, 0.2);
+  color: #60a5fa;
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(96, 165, 250, 0.3);
+}
+
+.btn-ver-mais {
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(358deg, #b6fffb 0%, #024343 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-ver-mais:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #0891b2 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Benefícios Section */
+.beneficios-section {
+  padding: 4rem 2rem;
+  animation: fadeInUp 0.8s 0.6s ease forwards;
+  animation-fill-mode: both;
+}
+
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.beneficio-card {
+  background: rgba(32,178,170, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 46, 44, 0.85);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.beneficio-card:hover {
+  transform: translateY(-3px);
+  background: rgba(10, 92, 87, 0.85);
+  border-color: rgba(2, 45, 43, 0.85);
+}
+
+.beneficio-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.beneficio-card h4 {
+  color: #002f2f;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.beneficio-card p {
+  color: #ffffff;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Processo Section */
+.processo-section {
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.3);
+  animation: fadeInUp 0.8s 0.8s ease forwards;
+  animation-fill-mode: both;
+}
+
+.processo-timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.processo-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #60a5fa, #06b6d4);
+  transform: translateX(-50%);
+}
+
+.processo-step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.processo-step:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.processo-step:nth-child(even) .step-content {
+  text-align: right;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(153deg, #b6fffb 0%, #024343 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  z-index: 2;
+  flex-shrink: 0;
+  margin: 0 2rem;
+  box-shadow: 0 0 20px rgba(227, 236, 247, 0.5);
+}
+
+.step-content {
+  flex: 1;
+  max-width: 300px;
+  background: rgba(0, 40, 40, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 10, 10, 0.8);
+}
