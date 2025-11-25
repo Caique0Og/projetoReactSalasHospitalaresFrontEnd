@@ -95,8 +95,9 @@ Para mais informações sobre o projeto, entre em contato através de:
 
 ---
 
-⭐ Desenvolvido com dedicação pela equipe Hospital Quartos
-
 ##Servidor BackEnd:
 
 -- https://github.com/Caique0Og/projetoReactSalasHospitalaresBackEnd
+
+
+⭐ Desenvolvido com dedicação pela equipe Hospital Quartos
